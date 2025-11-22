@@ -6,6 +6,9 @@ import express from 'express';
 // 서로 다른 포트가 상호작용할 수 있도록 도와주는 cors 정책해제
 import cors from 'cors';
 import userRouter from './routes/userRoutes.js';
+import dotenv from 'dotenv';
+
+dotenv.config({path:'./config/.env'});
 
 const App = express();
 const PORT = process.env.SERVER_PORT || 5000;
